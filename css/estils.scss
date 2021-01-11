@@ -1,0 +1,33 @@
+body {
+	box-sizing: border-box;
+	margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.contenedor {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    font-size: 3em;
+}
+
+.fa-star {
+
+    color: lightseagreen;
+
+    &focus,
+    &:hover,
+    &focus ~ &,
+    &:hover ~ & {
+        color: gold;
+        cursor: pointer;
+    }
+
+}
