@@ -1,14 +1,26 @@
-/*star = document.getElementById("hola");
+let list=['cinco','cuatro','tres','dos','uno'];
 
-function changeColor (star) {
-    star.style.color = "pink";
-}
-*/
+list.forEach(function(element) {
+    let star = document.getElementById(element);
 
-function vote(rating) {
-    $('#contenedor i')
-        .slice(0, rating)
-        .each(function(){
-            $(this).toggleClass('far fas')
-        })
-}
+    star.addEventListener("click", function(){
+        
+        let els = document.querySelectorAll(".checked");
+        els.forEach(function(el) {
+            el.classList.add('unchecked');
+        });
+
+        let num = list.indexOf(element);
+        let i;
+        for (i = num; i <= 5; i++){
+            mas = document.getElementById(list[i]);
+            var cls = mas.className;
+            
+            if(cls.includes("unchecked")) {
+                mas.classList.remove("unchecked");
+                mas.classList.add("checked");
+            }
+        }
+        
+    });
+});

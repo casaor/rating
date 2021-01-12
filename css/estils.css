@@ -45,4 +45,12 @@ body {
   color: gold;
   cursor: pointer;
 }
+
+.checked {
+  color: gold;
+}
+
+.unchecked {
+  color: lightseagreen;
+}
 /*# sourceMappingURL=estils.css.map */
