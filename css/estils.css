@@ -18,7 +18,7 @@ body {
   min-height: 100vh;
 }
 
-.contenedor {
+#contenedor {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
