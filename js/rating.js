@@ -5,11 +5,13 @@ list.forEach(function(element) {
 
     star.addEventListener("click", function(){
         
+        //Busca todos los elementos que tienen la clase checked para pasarla a unchecked i actualizar el num. de estrellas
         let els = document.querySelectorAll(".checked");
         els.forEach(function(el) {
             el.classList.add('unchecked');
         });
 
+        //Busca el numero correspondiente en el Array para con el loop cambiar a checked la estrella correspondiente y las anteriores
         let num = list.indexOf(element);
         let i;
         for (i = num; i <= 5; i++){
@@ -24,3 +26,18 @@ list.forEach(function(element) {
         
     });
 });
+
+
+//Cuando se clica fuera de #contenedor la clase checked pasa a unchecked
+var inside = document.getElementById('contenedor');
+    document.addEventListener('click', function(event) {
+        
+        var isClickInside = inside.contains(event.target);
+        
+        if (!isClickInside) {        
+            let els = document.querySelectorAll(".checked");
+                els.forEach(function(el) {
+                el.classList.add('unchecked');
+            });        
+        }
+    });

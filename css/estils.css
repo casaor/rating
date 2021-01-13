@@ -19,7 +19,7 @@ body {
 }
 
 #contenedor {
-  width: 100%;
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
